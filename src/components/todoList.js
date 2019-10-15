@@ -9,9 +9,7 @@ export default class TodoList extends Component {
   deleteItem(e) {
     e.preventDefault();
     this.setState({
-
     })
-
   }
   render() {
     return (
