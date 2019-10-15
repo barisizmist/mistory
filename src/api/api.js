@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import 'bootstrap/dist/css/bootstrap.css';
+import '../App'
 
 class api extends Component {
   constructor(props) {
@@ -7,27 +9,35 @@ class api extends Component {
       data: [],
     };
   }
+
   componentDidMount() {
-    fetch('https://api.github.com/users?since=135')
+    let qty = randomIntFromInterval(135, 500);
+    console.log(qty)
+    let url = `https://api.github.com/users?since=${qty}`;
+    fetch(url)
       .then(response => response.json())
-      .then(data => this.setState({ data }));
+      .then(data => this.setState({ data }, console.log(data), console.log(url)));
   }
+
   render() {
-    // const { hits } = this.data;
     return (
-
-      <ul>
+      <div>
         {
-          this.state.data.map(user => {
-            return (
-              <li key={user.id}>{user.login}</li>
-            )
-          })
-
+          this.state.data.map(user => (
+            <div className="image-wrapper" key={user.id} >
+              <img className="responsive-image" src={user.avatar_url} alt={user.login}>
+              </img>
+              <div className="name"> <span> {user.login}</span></div>
+            </div>
+          )
+          )
         }
-      </ul>
+      </div>
     );
   }
+}
+function randomIntFromInterval(min, max) { // min and max included 
+  return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
 export default api;

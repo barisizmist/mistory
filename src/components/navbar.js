@@ -45,7 +45,7 @@ const Navigator = (props) => {
                 </DropdownItem>
                 <DropdownItem divider />
                 <DropdownItem>
-                  <NavLink href="/carrier">Carrier</NavLink>
+                  <NavLink href="/api">Api</NavLink>
                 </DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
