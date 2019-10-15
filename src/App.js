@@ -6,7 +6,7 @@ import TodoApp from './components/todo';
 
 function App() {
   return (
-    <div>
+    <div className="text-center">
       <Hello name='Jhon'></Hello>
       <Timer></Timer>
       <TodoApp></TodoApp>
