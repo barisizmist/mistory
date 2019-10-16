@@ -21,7 +21,7 @@ export default class timer extends Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="container heighting">
         Saniye : {this.state.seconds}
       </div>
     )

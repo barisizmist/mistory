@@ -12,6 +12,9 @@ import {
   DropdownMenu,
   DropdownItem
 } from 'reactstrap';
+import {
+  Link
+} from 'react-router-dom'
 
 const Navigator = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,40 +22,39 @@ const Navigator = (props) => {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <div className="container">
-      <Navbar color="light" light expand="md">
-        <NavbarBrand href="/">Mistory</NavbarBrand>
-        <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
-          <Nav className="ml-auto" navbar>
-            <NavItem>
-              <NavLink href="/todo">Todo</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="/timer">Timer</NavLink>
-            </NavItem>
-            <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
-                Others
-              </DropdownToggle>
-              <DropdownMenu right>
-                <DropdownItem>
-                  <NavLink href="/hello">Hello</NavLink>
-                </DropdownItem>
-                <DropdownItem>
+    <Navbar className="nav-custom" color="light" ligth expand="md">
+      <Link className="navbar-brand" to="/">Mistory</Link>
 
-                  <NavLink href="/about">About Our Company</NavLink>
-                </DropdownItem>
-                <DropdownItem divider />
-                <DropdownItem>
-                  <NavLink href="/api">Git User Api</NavLink>
-                </DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown>
-          </Nav>
-        </Collapse>
-      </Navbar>
-    </div>
+      <NavbarToggler onClick={toggle} />
+      <Collapse isOpen={isOpen} navbar>
+        <Nav className="ml-auto" navbar>
+          <NavItem>
+            <Link className="nav-link" to="/todo">Todo</Link>
+          </NavItem>
+          <NavItem>
+            <Link className="nav-link" to="/timer">Timer</Link>
+          </NavItem>
+          <UncontrolledDropdown nav inNavbar>
+            <DropdownToggle nav caret>
+              Others
+              </DropdownToggle>
+            <DropdownMenu right>
+              <DropdownItem>
+                <Link className="nav-link" to="/hello">Hi!</Link>
+              </DropdownItem>
+              <DropdownItem>
+
+                <Link className="nav-link" to="/about">About Us</Link>
+              </DropdownItem>
+              <DropdownItem divider />
+              <DropdownItem>
+                <Link className="nav-link" to="/api">Git User Api</Link>
+              </DropdownItem>
+            </DropdownMenu>
+          </UncontrolledDropdown>
+        </Nav>
+      </Collapse>
+    </Navbar >
   );
 }
 

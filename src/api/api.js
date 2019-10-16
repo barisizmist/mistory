@@ -20,7 +20,7 @@ class api extends Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="container heighting">
         {
           this.state.data.map(user => (
             <div className="image-wrapper" key={user.id} >

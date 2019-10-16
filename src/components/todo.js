@@ -21,7 +21,7 @@ class TodoApp extends React.Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="container heighting">
         <div className="row d-flex justify-content-center">
           <div className="col-md-4">
             <div className="text-center ">
