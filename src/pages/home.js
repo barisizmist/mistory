@@ -1,10 +1,22 @@
-import React, { Component } from 'react';
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.css';
+import Slider from '../components/carousel';
+import Works from '../components/works';
+import {
+  Container
+} from 'reactstrap';
 
-class Home extends Component {
-  render() {
-    return (
-      <div>Wellcome to Home</div >
-    )
-  }
-}
+const Home = () => {
+  return (
+    // <div className="container">
+    //   <Slider />
+    // </div>
+    <Container>
+      <Slider />
+      <Works />
+
+    </Container>
+  );
+};
+
 export default Home;

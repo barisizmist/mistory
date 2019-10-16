@@ -1,6 +1,5 @@
 import React from 'react'
 import TodoList from './todoList';
-import 'bootstrap/dist/css/bootstrap.css';
 import { Spinner, ToastHeader, Toast, ToastBody } from 'reactstrap';
 import '../App.css'
 

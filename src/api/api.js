@@ -12,7 +12,6 @@ class api extends Component {
 
   componentDidMount() {
     let qty = randomIntFromInterval(135, 500);
-    console.log(qty)
     let url = `https://api.github.com/users?since=${qty}`;
     fetch(url)
       .then(response => response.json())
@@ -21,7 +20,7 @@ class api extends Component {
 
   render() {
     return (
-      <div>
+      <div className="container">
         {
           this.state.data.map(user => (
             <div className="image-wrapper" key={user.id} >
@@ -36,7 +35,7 @@ class api extends Component {
     );
   }
 }
-function randomIntFromInterval(min, max) { // min and max included 
+function randomIntFromInterval(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 

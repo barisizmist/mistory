@@ -19,7 +19,7 @@ const Navigator = (props) => {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <div>
+    <div className="container">
       <Navbar color="light" light expand="md">
         <NavbarBrand href="/">Mistory</NavbarBrand>
         <NavbarToggler onClick={toggle} />
@@ -45,7 +45,7 @@ const Navigator = (props) => {
                 </DropdownItem>
                 <DropdownItem divider />
                 <DropdownItem>
-                  <NavLink href="/api">Api</NavLink>
+                  <NavLink href="/api">Git User Api</NavLink>
                 </DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>

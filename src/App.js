@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import './App.css';
 import Hello from './components/Hello';
 import Timer from './components/timer';
 import TodoApp from './components/todo';
-import Nav from './components/navbar';
 import {
   BrowserRouter as Router,
   Route,
@@ -11,14 +9,14 @@ import {
 } from 'react-router-dom'
 import home from './pages/home';
 import NotFound from './pages/error/NotFound';
+import Nav from './components/navbar';
 import api from './api/api';
-
-
+import './App.css'
 
 class App extends Component {
   render() {
     return (
-      <Router >
+      <Router>
         <Nav></Nav>
         <Switch>
           <Route exact path="/" component={home} />
