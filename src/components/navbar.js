@@ -3,10 +3,8 @@ import {
   Collapse,
   Navbar,
   NavbarToggler,
-  NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
@@ -22,7 +20,7 @@ const Navigator = (props) => {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <Navbar className="nav-custom" color="light" ligth expand="md">
+    <Navbar className="nav-custom" color="light" light expand="md">
       <Link className="navbar-brand" to="/">Mistory</Link>
 
       <NavbarToggler onClick={toggle} />

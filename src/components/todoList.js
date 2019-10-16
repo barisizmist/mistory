@@ -1,33 +1,22 @@
 import React, { Component } from 'react'
-import { Table } from 'reactstrap'
+
 
 export default class TodoList extends Component {
   constructor(props) {
     super(props);
-    this.deleteItem = this.deleteItem.bind(this);
+    this.removeItem = this.removeItem.bind(this);
   }
-  deleteItem(e) {
-    e.preventDefault();
-    this.setState({
-    })
+  removeItem(idx) {
+    console.log(idx)
+    this.props.removeItem(idx);
   }
   render() {
     return (
-
-      <Table bordered>
-        <tbody>
-          {
-            this.props.items.map(item => (
-              <tr>
-                <th >{item.idx}</th>
-                <td key={item.id}>{item.text}</td>
-                <td onClick={this.deleteItem}>X</td>
-              </tr>
-            ))
-          }
-
-        </tbody>
-      </Table>
+      <ul style={{ padding: '0' }}>
+        {this.props.items.map((item) => {
+          return <li style={{ listStyle: 'none' }} className="d-flex justify-content-between" > <span>{item.idx + 1 + ')'}</span> {item.text} <i onClick={() => { this.removeItem(item.idx) }} key={item.id} style={{ cursor: 'pointer' }} className="fas fa-trash-alt"></i></li>
+        })}
+      </ul>
     )
   }
 }

@@ -15,18 +15,22 @@ class TodoApp extends React.Component {
     }
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-
+    this.removeItem = this.removeItem.bind(this);
   }
-
+  removeItem(idx) {
+    this.setState({
+      items: this.state.items.filter(el => el.idx !== idx)
+    })
+  }
 
   render() {
     return (
-      <div className="container heighting">
+      <div className="container heighting mt-4">
         <div className="row d-flex justify-content-center">
           <div className="col-md-4">
             <div className="text-center ">
               <h3>YAPILACAKLAR</h3>
-              <TodoList items={this.state.items} />
+              <TodoList removeItem={this.removeItem} items={this.state.items} />
               <form onSubmit={this.handleSubmit}>
                 <label htmlFor="new-todo">Ne yapılması gerekiyor?</label>
                 <input className="form-control" id="new-todo" type="text" value={this.state.text} onChange={this.handleChange} />
@@ -35,7 +39,7 @@ class TodoApp extends React.Component {
                   <Spinner className="spin" type="grow d-block text-center" color="primary" />
                 }
                 <button className="btn btn-success mt-2">
-                  Ekle {this.state.items.length + 1}
+                  Ekle
                 </button>
 
               </form>
@@ -76,7 +80,7 @@ class TodoApp extends React.Component {
     const newItem = {
       text: this.state.text,
       id: Date.now(),
-      idx: this.state.items.length + 1
+      idx: this.state.items.length
 
     }
     setTimeout(() => {
