@@ -29,7 +29,7 @@ export default class works extends Component {
         </Row>
         <Slider {...settings}>
           <Card>
-            <CardImg top width="100%" src="http://placeimg.com/318/180/any" alt="Card image cap" />
+            <CardImg top width="100%" src="http://placeimg.com/318/180/any" alt="work1" />
             <CardBody>
               <CardTitle>Card title</CardTitle>
               <CardSubtitle>Card subtitle</CardSubtitle>
@@ -38,7 +38,7 @@ export default class works extends Component {
             </CardBody>
           </Card>
           <Card>
-            <CardImg top width="100%" src="https://loremflickr.com/318/180" alt="Card image cap" />
+            <CardImg top width="100%" src="https://loremflickr.com/318/180" alt="work2" />
             <CardBody>
               <CardTitle>Card title</CardTitle>
               <CardSubtitle>Card subtitle</CardSubtitle>
@@ -47,7 +47,7 @@ export default class works extends Component {
             </CardBody>
           </Card>
           <Card>
-            <CardImg top width="100%" src="https://placekitten.com/318/180" alt="Card image cap" />
+            <CardImg top width="100%" src="https://placekitten.com/318/180" alt="work3" />
             <CardBody>
               <CardTitle>Card title</CardTitle>
               <CardSubtitle>Card subtitle</CardSubtitle>
@@ -56,7 +56,7 @@ export default class works extends Component {
             </CardBody>
           </Card>
           <Card>
-            <CardImg top width="100%" src="https://picsum.photos/318/180" alt="Card image cap" />
+            <CardImg top width="100%" src="https://picsum.photos/318/180" alt="work4" />
             <CardBody>
               <CardTitle>Card title</CardTitle>
               <CardSubtitle>Card subtitle</CardSubtitle>
