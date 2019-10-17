@@ -13,7 +13,6 @@ const Home = () => {
       <Slider />
       <Works />
       <Section />
-
     </Container>
   );
 };

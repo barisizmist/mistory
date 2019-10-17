@@ -14,6 +14,7 @@ import Nav from './components/navbar';
 import Footer from './components/footer';
 import api from './api/api';
 import './App.css'
+import about from './pages/about';
 
 class App extends Component {
   render() {
@@ -26,6 +27,7 @@ class App extends Component {
           <Route exact path="/hello" component={() => <Hello name={`There`} />} />
           <Route exact path="/timer" component={Timer} />
           <Route exact path="/api" component={api} />
+          <Route exact path="/about" component={about} />
           <Route component={NotFound} />
         </Switch>
         <Footer />
