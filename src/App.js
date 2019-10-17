@@ -15,6 +15,8 @@ import Footer from './components/footer';
 import api from './api/api';
 import './App.css'
 import about from './pages/about';
+import login from './components/login';
+import users from './components/users';
 
 class App extends Component {
   render() {
@@ -28,6 +30,8 @@ class App extends Component {
           <Route exact path="/timer" component={Timer} />
           <Route exact path="/api" component={api} />
           <Route exact path="/about" component={about} />
+          <Route exact path="/login" component={login} />
+          <Route exact path="/users" component={users} />
           <Route component={NotFound} />
         </Switch>
         <Footer />

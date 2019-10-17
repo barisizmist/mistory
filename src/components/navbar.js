@@ -27,6 +27,9 @@ const Navigator = (props) => {
       <Collapse isOpen={isOpen} navbar>
         <Nav className="ml-auto" navbar>
           <NavItem>
+            <Link className="nav-link" to="/login">Login</Link>
+          </NavItem>
+          <NavItem>
             <Link className="nav-link" to="/todo">Todo</Link>
           </NavItem>
           <NavItem>
