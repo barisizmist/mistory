@@ -1,10 +1,15 @@
 import React, { Component } from 'react'
 import { Container, Row, Col } from 'reactstrap'
+import { Helmet } from 'react-helmet';
 
 export default class about extends Component {
   render() {
     return (
       <Container>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>About - Mistory App</title>
+        </Helmet>
         <Row className="heighting mt-4">
           <Col md='12'>
             <h2 className="text-center">About Our Company</h2>

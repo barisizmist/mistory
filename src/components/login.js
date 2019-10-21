@@ -64,7 +64,7 @@ export default class login extends Component {
 
               <Row>
                 {
-                  !errorMessage == "" &&
+                  !errorMessage === "" &&
                   <p className="err-message">{this.state.errorMessage}</p>
                 }
                 <Col className="d-flex justify-content-center mt-4">

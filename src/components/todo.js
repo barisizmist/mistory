@@ -1,7 +1,7 @@
 import React from 'react'
 import TodoList from './todoList';
 import { Spinner, ToastHeader, Toast, ToastBody } from 'reactstrap';
-import '../App.css'
+import '../App.scss'
 
 class TodoApp extends React.Component {
 
@@ -70,9 +70,9 @@ class TodoApp extends React.Component {
     e.preventDefault();
 
     setTimeout(() => {
-      this.setState(state => ({
+      this.setState({
         ok: false
-      }))
+      })
     }, 1000);
     if (!this.state.text.length) {
       return;
@@ -84,17 +84,17 @@ class TodoApp extends React.Component {
 
     }
     setTimeout(() => {
-      this.setState(state => ({
+      this.setState({
         items: this.state.items.concat(newItem),
         text: '',
         xarosho: true
-      }))
+      })
     }, 1000)
 
     setTimeout(() => {
-      this.setState(state => ({
+      this.setState({
         xarosho: false
-      }))
+      })
     }, 3000);
   }
 

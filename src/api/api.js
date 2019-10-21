@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import 'bootstrap/dist/css/bootstrap.css';
 import '../App'
+import { Helmet } from 'react-helmet'
+
 
 class api extends Component {
   constructor(props) {
@@ -21,6 +23,10 @@ class api extends Component {
   render() {
     return (
       <div className="container heighting mt-4">
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>Github Users - Mistory App</title>
+        </Helmet>
         {
           this.state.data.map(user => (
             <div className="image-wrapper" key={user.id} >

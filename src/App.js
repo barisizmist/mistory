@@ -13,15 +13,17 @@ import NotFound from './pages/error/NotFound';
 import Nav from './components/navbar';
 import Footer from './components/footer';
 import api from './api/api';
-import './App.css'
+import './App.scss'
 import about from './pages/about';
 import login from './components/login';
 import users from './components/users';
 
 class App extends Component {
+
   render() {
     return (
       <BrowserRouter>
+
         <Nav></Nav>
         <Switch>
           <Route exact path="/" component={home} />
