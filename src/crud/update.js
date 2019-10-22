@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
-import { Form } from 'reactstrap'
 
-export default class create extends Component {
+export default class update extends Component {
   render() {
     return (
       <div>
-        Create Page
+        Update Page
       </div>
     )
   }

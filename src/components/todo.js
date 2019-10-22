@@ -45,7 +45,7 @@ class TodoApp extends React.Component {
   handleCheck(id) {
     var data = this.state.items;
     var commentIndex = data.findIndex(function (c) {
-      return c.id == id;
+      return c.id === id;
     });
 
     var updatedItem = update(data[commentIndex], { done: { $set: !data[commentIndex].done } });
