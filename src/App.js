@@ -23,8 +23,7 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-
-        <Nav></Nav>
+        <Nav />
         <Switch>
           <Route exact path="/" component={home} />
           <Route exact path="/todo" component={TodoApp} />

@@ -9,7 +9,7 @@ import {
 
 const items = [
   {
-    src: 'http://placeimg.com/800/400/any',
+    src: 'http://lorempixel.com/800/400',
     altText: 'Lorem Ipsum Dolor ',
     caption: 'lorem ipsum'
   },
