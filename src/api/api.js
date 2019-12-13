@@ -17,7 +17,7 @@ class api extends Component {
     let url = `https://api.github.com/users?since=${qty}`;
     fetch(url)
       .then(response => response.json())
-      .then(data => this.setState({ data }, console.log(data), console.log(url)));
+      .then(data => this.setState({ data }));
   }
 
   render() {

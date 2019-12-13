@@ -98,7 +98,6 @@ export default class users extends Component {
                   </Card>
                 </Col>
               ))
-
             }
 
           </Row>

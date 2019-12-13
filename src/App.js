@@ -17,6 +17,7 @@ import './App.scss'
 import about from './pages/about';
 import login from './components/login';
 import users from './components/users';
+import contact from './components/contact';
 
 class App extends Component {
 
@@ -33,6 +34,7 @@ class App extends Component {
           <Route exact path="/about" component={about} />
           <Route exact path="/login" component={login} />
           <Route exact path="/users" component={users} />
+          <Route exact path="/contact" component={contact} />
           <Route component={NotFound} />
         </Switch>
         <Footer />

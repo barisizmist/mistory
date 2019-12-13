@@ -35,6 +35,9 @@ const Navigator = (props) => {
           <NavItem>
             <Link className="nav-link" to="/timer">Timer</Link>
           </NavItem>
+          <NavItem>
+            <Link className="nav-link" to="/contact">Contact</Link>
+          </NavItem>
           <UncontrolledDropdown nav inNavbar>
             <DropdownToggle nav caret>
               Others

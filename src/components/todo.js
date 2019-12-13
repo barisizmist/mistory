@@ -20,6 +20,14 @@ class TodoApp extends React.Component {
 
   submitTodoForm = (dispatch, e) => {
     e.preventDefault();
+    if (this.state.text === '') {
+      var err = document.querySelector('.error-message');
+      err.innerHTML = 'Please type a to do!';
+      err.style.color = "red";
+      err.style.marginTop = '10px';
+      err.style.marginBottom = '0';
+      return;
+    }
     var newTodo = {
       text: this.state.text,
       id: uniqid(),
@@ -58,6 +66,7 @@ class TodoApp extends React.Component {
                     </div>
                     <form id="todo-form" onSubmit={this.submitTodoForm.bind(this, dispatch)} className="d-flex flex-column justify-content-center align-items-center mt-4">
                       <input className="form-control" type="text" name="text" onChange={this.changeText.bind(this)} value={this.state.text} />
+                      <p className="error-message"></p>
                       <button type="submit" className="btn btn-success add-btn">Add</button>
                     </form>
                   </div>

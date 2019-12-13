@@ -22,14 +22,15 @@ export default class login extends Component {
       loginUser,
       { headers: { 'Content-Type': 'application/json' } }
     )
-      .then(() => {
+      .then(response => {
+        console.log(response)
         this.props.history.push("/users")
       })
       .catch(error => {
         this.setState({
           errorMessage: error.response.data.error
         })
-        // this.props.history.push("/login")
+        // this.props.history.push("/login")y
       });
   }
   changeInput = (e) => {
@@ -56,17 +57,18 @@ export default class login extends Component {
               <FormGroup check>
                 <Label check>
                   <Input type="checkbox" />{' '}
-                  Remember me
+                  Check me out
+
                  </Label>
               </FormGroup>
+
               <Row>
                 {
-                  !errorMessage == '' &&
+                  !errorMessage === "" &&
                   <p className="err-message">{this.state.errorMessage}</p>
                 }
                 <Col className="d-flex justify-content-center mt-4">
                   <Button type="submit">Login</Button>
-
                 </Col>
               </Row>
             </Form>
