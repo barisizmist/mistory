@@ -78,7 +78,7 @@ body {
   padding-bottom: 30px;
 }
 .heighting {
-  min-height: calc(100vh - 165px);
+  min-height: calc(100vh - 217px);
   padding: 0 20px;
 }
 .nav-custom {
@@ -122,4 +122,7 @@ body {
 }
 .deleteIcon {
   cursor: pointer;
+}
+.navbar-nav .dropdown-menu {
+  background-color: #fdf9f3;
 }
