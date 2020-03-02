@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {
   Collapse,
   Navbar,
@@ -9,56 +9,75 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem
-} from 'reactstrap';
-import {
-  Link
-} from 'react-router-dom'
+} from "reactstrap";
+import { Link } from "react-router-dom";
 
-const Navigator = (props) => {
+const Navigator = props => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggle = () => setIsOpen(!isOpen);
+  // const toggle = () => setIsOpen(!isOpen);
+  const toggle = () => {
+    if (window.innerWidth < 768) {
+      setIsOpen(!isOpen);
+    }
+  };
 
   return (
     <Navbar className="nav-custom" color="light" light expand="md">
-      <Link className="navbar-brand" to="/">Mistory</Link>
+      <Link className="navbar-brand" to="/">
+        Mistory
+      </Link>
 
       <NavbarToggler onClick={toggle} />
       <Collapse isOpen={isOpen} navbar>
         <Nav className="ml-auto" navbar>
           <NavItem>
-            <Link className="nav-link" to="/login">Login</Link>
+            <Link onClick={toggle} className="nav-link" to="/login">
+              Login
+            </Link>
           </NavItem>
           <NavItem>
-            <Link className="nav-link" to="/todo">Todo</Link>
+            <Link onClick={toggle} className="nav-link" to="/todo">
+              Todo
+            </Link>
           </NavItem>
           <NavItem>
-            <Link className="nav-link" to="/timer">Timer</Link>
+            <Link onClick={toggle} className="nav-link" to="/timer">
+              Timer
+            </Link>
           </NavItem>
           <NavItem>
-            <Link className="nav-link" to="/contact">Contact</Link>
+            <Link onClick={toggle} className="nav-link" to="/contact">
+              Contact
+            </Link>
           </NavItem>
           <UncontrolledDropdown nav inNavbar>
             <DropdownToggle nav caret>
               Others
-              </DropdownToggle>
+            </DropdownToggle>
             <DropdownMenu right>
               <DropdownItem>
-                <Link className="nav-link" to="/hello">Hi!</Link>
+                <Link onClick={toggle} className="nav-link" to="/hello">
+                  Hi!
+                </Link>
               </DropdownItem>
               <DropdownItem>
-                <Link className="nav-link" to="/about">About Us</Link>
+                <Link onClick={toggle} className="nav-link" to="/about">
+                  About Us
+                </Link>
               </DropdownItem>
               <DropdownItem divider />
               <DropdownItem>
-                <Link className="nav-link" to="/api">Git User Api</Link>
+                <Link onClick={toggle} className="nav-link" to="/api">
+                  Git User Api
+                </Link>
               </DropdownItem>
             </DropdownMenu>
           </UncontrolledDropdown>
         </Nav>
       </Collapse>
-    </Navbar >
+    </Navbar>
   );
-}
+};
 
 export default Navigator;
