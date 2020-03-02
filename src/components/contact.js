@@ -1,11 +1,16 @@
 import React, { Component } from "react";
 import { Row, Col, Container } from "reactstrap";
+import { Helmet } from "react-helmet";
 
 export default class contact extends Component {
   render() {
     return (
       <div>
         <Container className="my-4 heighting">
+          <Helmet>
+            <meta charSet="utf-8" />
+            <title> Contact - Mistory App</title>
+          </Helmet>
           <Row>
             <Col xs="12 h-100">
               <h2>Contact with us</h2>
