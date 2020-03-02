@@ -10,7 +10,7 @@ import {
 const items = [
   {
     src: "https://loremflickr.com/800/400",
-    altText: "Lorem Ipsum Dolor ",
+    altText: "Lorem Ipsum Dolor Sit Amed",
     caption: "lorem ipsum"
   },
   {
