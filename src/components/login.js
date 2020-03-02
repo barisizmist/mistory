@@ -23,14 +23,12 @@ export default class login extends Component {
       { headers: { 'Content-Type': 'application/json' } }
     )
       .then(response => {
-        console.log(response)
         this.props.history.push("/users")
       })
       .catch(error => {
         this.setState({
           errorMessage: error.response.data.error
         })
-        // this.props.history.push("/login")y
       });
   }
   changeInput = (e) => {
@@ -58,15 +56,10 @@ export default class login extends Component {
                 <Label check>
                   <Input type="checkbox" />{' '}
                   Check me out
-
                  </Label>
               </FormGroup>
-
               <Row>
-                {
-                  !errorMessage === "" &&
-                  <p className="err-message">{this.state.errorMessage}</p>
-                }
+                <p className="err-message">{errorMessage}</p>
                 <Col className="d-flex justify-content-center mt-4">
                   <Button type="submit">Login</Button>
                 </Col>

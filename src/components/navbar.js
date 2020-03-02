@@ -47,7 +47,6 @@ const Navigator = (props) => {
                 <Link className="nav-link" to="/hello">Hi!</Link>
               </DropdownItem>
               <DropdownItem>
-
                 <Link className="nav-link" to="/about">About Us</Link>
               </DropdownItem>
               <DropdownItem divider />
